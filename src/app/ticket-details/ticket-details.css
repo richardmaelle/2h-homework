@@ -1,0 +1,16 @@
+mat-card {
+    width: 80%;
+    margin: 0 auto;
+}
+
+mat-card-title, mat-card-content {
+    text-align: center;
+}
+mat-card-footer {
+    margin: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+mat-card-footer div {
+    margin: 0 8px;
+}

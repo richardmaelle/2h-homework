@@ -1,0 +1,16 @@
+<mat-card *ngIf="ticket$ | async as ticket">
+    <mat-card-title>Ticket {{ ticket.id }}</mat-card-title>
+    <mat-card-content>{{ ticket.description }}</mat-card-content>
+    <mat-card-footer>
+        <div>
+            <p *ngIf="ticket.assigneeId; else isNotAssigned">Assigned to : {{ getNameUserAssigned(ticket.assigneeId) }}</p>
+            <ng-template #isNotAssigned><p>Not assigned</p></ng-template>
+            <button mat-raised-button color="primary">Assign to</button>
+        </div>
+
+        <div>
+            <p>State : {{ ticket.complete ? 'Complete' : 'Not complete'}}</p>
+            <button mat-raised-button color="accent" [disabled]="ticket.complete">Complete ticket</button>
+        </div>
+    </mat-card-footer>
+</mat-card>

@@ -1,0 +1,22 @@
+#tickets-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+mat-card {
+    width: 40%;
+}
+
+mat-card-title {
+    text-align: center;
+}
+
+#add-button {
+    display: block;
+    margin: 16px auto;
+}
+
+#filter-button {
+    display: block;
+    margin: 16px 32px;
+}

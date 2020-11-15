@@ -1,0 +1,9 @@
+<button id="filter-button" mat-raised-button>Filter</button>
+
+<div id="tickets-list">
+    <mat-card *ngFor="let ticket of tickets$ | async" (click)="goToDetailsPage(ticket.id)">
+        <mat-card-title>Ticket {{ ticket.id }}</mat-card-title>
+        <mat-card-content>{{ ticket.description }}</mat-card-content>
+    </mat-card>
+</div>
+<button id="add-button" mat-raised-button color="primary" (click)="openTicketAdd()">Add ticket</button>
